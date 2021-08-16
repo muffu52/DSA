@@ -45,9 +45,9 @@ def merge(Arr, L , R):
 
     # join left over array to main array
     if i < len(L):
-        np.concatenate((Arr[:h], L[i:]))
+        Arr = np.concatenate((Arr[:h], L[i:]))
     else:
-        np.concatenate((Arr[:h], R[j:]))
+        Arr = np.concatenate((Arr[:h], R[j:]))
 
     return Arr
 
