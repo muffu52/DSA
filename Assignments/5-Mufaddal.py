@@ -70,7 +70,6 @@ def countingSortRad(A,index):
     C = [0] * (k+1)
     B = [0] * len(A)
 
-
     # use the specific digit from A[j] instead of the full value
     for i in range(0, k+1):
         C[i]= 0
@@ -90,7 +89,7 @@ def countingSortRad(A,index):
 def radix(A):
     
     max_digits = len(str(np.max(A)))
-    for i in range(1,max_digits+1):
+    for i in range(0,max_digits):
         countingSortRad(A,i)        # we use counting sort in radix sort as it is a stable sort.
 
 
