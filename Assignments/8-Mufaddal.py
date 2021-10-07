@@ -61,14 +61,14 @@ class Tree:
             x = x.l
         return x
 
-    def _parentVal(self, node, x):
-        if (node.l and node.l.v == x.v) or (node.r and node.r.v == x.v):
-            return node
+    def _parentVal(self, root, x):
+        if (root.l and root.l.v == x.v) or (root.r and root.r.v == x.v):
+            return root
         else:
-            if node.l is not None:
-                return self._parentVal(node.l , x)
-            if node.r is not None:
-                return self._parentVal(node.r , x)
+            if root.l is not None:
+                return self._parentVal(root.l , x)
+            if root.r is not None:
+                return self._parentVal(root.r , x)
 
     def successor(self, val):
         x = self.find(val)
@@ -93,8 +93,8 @@ tree.add(8)
 tree.add(2)
 tree.printTree()
 print(tree.find(3).v)
-# print(tree.find(10))
+print(tree.find(10))
 
-print(tree.successor(10))
+print(tree.successor(3))
 tree.deleteTree()
 tree.printTree()
